@@ -9,9 +9,9 @@ interface props {
 const Tags = ({ tags, requiredTags, setRequiredTags }: props) => {
   const createTagList = (tag: string) => {
     if (requiredTags.includes(tag) && requiredTags.length > 0) {
-      const requiredTagsForSplice = [...requiredTags];
-      requiredTagsForSplice.splice(requiredTagsForSplice.indexOf(tag), 1);
-      setRequiredTags(requiredTagsForSplice);
+      setRequiredTags(
+        requiredTags.filter((requiredTag) => requiredTag !== tag)
+      );
     } else {
       setRequiredTags([...requiredTags, tag]);
     }
