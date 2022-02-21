@@ -1,0 +1,21 @@
+.tags-container {
+  display: flex;
+}
+
+.tag {
+  font-size: 14px;
+  border-radius: 8px;
+  border: teal 1px solid;
+  color: teal;
+
+  padding: 8px;
+  width: max-content;
+
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.active {
+  background-color: teal;
+  color: white;
+}
